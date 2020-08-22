@@ -20,15 +20,7 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
-    "/contato": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/pesquisa": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/sobre": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
