@@ -4,9 +4,11 @@ import "./style.css"
 
 
 const App = () => {
-  return { 
-    < div className = 'App' > Hello World    </ >
-  }
+  return (
+    <div className='App' >
+      HELLO!!!
+    </div >
+  )
 }
 
 const rootElement = document.getElementById("root")
