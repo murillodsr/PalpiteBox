@@ -1,12 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
 import useSWR from 'swr'
+import PageTitle from '../components/PageTitle'
 
 const fetcher = (...args) => fetch(...args).then(res => res.json()) //fetch, padrão do broweser.
 const Index = () => {
   const { data, error } = useSWR('/api/get-promo', fetcher) // Forma de carregar os dados. 
   return (                                                  // mesmo com a aplicação aberta (quando tiver clique) é possível atualizar!
     <div>
+      <PageTitle title='Seja Bem Vindo!' />
       <p className='mt-12 text-center'>
         O estabelecimento X sempre busca atender melhor seus clienes.<br />
         Por isso gostariamos de ouvir a sua opnião.<br />

@@ -11,10 +11,9 @@ export default async (req, res) => {
     const sheet = doc.sheetsByIndex[2]
     await sheet.loadCells('A4:B4')
 
-    //abaixo o que faz o funcionar de forma dinâmica!!!!
+    //abaixo o que faz funcionar de forma dinâmica!!
     const mostrarPromocaoCell = sheet.getCell(3, 0)
     const textoCell = sheet.getCell(3, 1)
-
     res.end(JSON.stringify({
       showCoupon: mostrarPromocaoCell.value === 'VERDADEIRO',
       message: textoCell.value

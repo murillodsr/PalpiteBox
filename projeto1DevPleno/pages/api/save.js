@@ -26,21 +26,21 @@ export default async (req, res) => {
     let Cupom = ''
     let Promo = ''
     if (mostrarPromocaoCell.value === 'VERDADEIRO') {
-      // TODO gerar cupom
+      // gerar cupom
       Cupom = genCupom()
       Promo = textoCell.value
     }
 
     await sheet.addRow({
       Nome: data.Nome,
-      email: data.email,
-      whatsapp: data.whatsapp,
-      Nota: 5,
+      Email: data.Email,
+      Whatsapp: data.Whatsapp,
+      Nota: parseInt(data.Nota),
       'Data Preenchimento': moment().format('DD/MM/YYYY, HH:mm:ss'),
       Cupom,
       Promo
     })
-    res.end(req.stringify({
+    res.end(JSON.stringify({
       showCoupon: Cupom !== '',
       Cupom,
       Promo
