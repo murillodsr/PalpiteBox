@@ -1,24 +1,14 @@
-import logo from './Components/App/logo.svg';
-import './Components/App/App.css';
+import './App.css';
+import Counter from '../Counter/Counter';
+import SmartCounter from '../Smartcounter/Smartcounter';
+import Ifoodcounter from '../Ifoodcounter/Ifoodcounter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Hello World</h1>
+      <Ifoodcounter />
+    </>
   );
 }
 
