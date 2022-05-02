@@ -1,0 +1,59 @@
+Resolução Desafio 1/3 - Esfera
+
+const PI = 3.14159;
+
+let R = parseFloat(gets());
+
+let Vol = ((4/3) * PI * Math.pow(R, 3));
+
+print("VOLUME = "  +  Vol.toFixed(3));
+
+############################################################
+
+Resolução Desafio 2/3 - Ultrapassando V
+
+let R = parseInt(gets());
+let V = 0;
+let soma = 0;
+let contaN = 0;
+
+while(V <= R) {
+  V = parseInt(gets());
+}
+
+while(soma <= V) {
+  
+    soma += R;
+    R++;
+    contaN++;
+
+}
+ print(contaN)
+
+############################################################
+
+Resolução Desafio 3/3 - Ordenando Números Pares e Ímpares
+
+let num = parseInt(gets());
+let index = 0;
+
+let numeros = Array(num);
+
+while (index < num ) {
+  
+  numero = parseInt(gets());
+  
+  if (numero >= 0 ) {
+    numeros[index] = numero;
+    index++;
+  }
+}
+
+pares = numeros.filter(value => value % 2 == 0);
+impares = numeros.filter(value => value % 2 != 0);
+
+pares.sort((a, b) => a-b);
+impares.sort((a, b) => b-a);
+
+pares.forEach(i => console.log(i));
+impares.forEach(i => console.log(i));
